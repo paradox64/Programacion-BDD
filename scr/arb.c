@@ -42,7 +42,6 @@ int main (){
         case 6:
           compactar(archivo);
           break;*/
-        default:printf("El programa finalizo");
       }
   }
   return 0;
