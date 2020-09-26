@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "climits": "c",
+        "cstdarg": "c",
+        "cstdio": "c",
+        "cstdlib": "c",
+        "cstdbool": "c"
+    }
+}
