@@ -94,10 +94,17 @@ void leerArchivo(FILE *archivo){
     else 
     {     
 
-        for (i = 0; i < ncampos; i++)
-        {
-          fread(&registro,sizeof(struct header),1,archivo);
-          printf("%d", registro.id, "%s",registro.lname, "%s\n",registro.fname);
+        /*for (i = 0; i < ncampos; i++)
+        {*/
+        int nb = (&registro,sizeof(struct header),1,archivo);
+           while ( nb != 0)
+  { 
+    printf(" Cod %i\n",&registro.id ) ;
+    printf(" Nombre %s\n",&registro.fname) ;
+    printf(" longitud %s\n",&registro.lname) ;
+    printf(" ----------------------\n") ;
+    nb = fread(&registro,sizeof(struct header),1,archivo);
+  }
         /*
         fread(registro,sizeof(struct header),1,archivo);
         //  printf("%s","ID  : ");
@@ -106,8 +113,8 @@ void leerArchivo(FILE *archivo){
           printf("%s",&registro.lname);
          // printf("%s"," ,Apellido  :");
           printf("%s\n" ,&registro.fname);
-        }      */
-        }          
+        }      
+        }   */       
         fclose(archivo);
     }
 }
