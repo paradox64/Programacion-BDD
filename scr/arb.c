@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 
-struct record_a
+struct registroArchivo
 {
     long clave;
     char RazonSocial[50];
@@ -11,10 +12,21 @@ struct record_a
     long TE;
     long Celular;
     char Mail[100];
+    bool libre;
+} registroArchivo;
 
-} record_a;
+struct indiceArchivo 
+{
+  int HI;
+  int HD;
+  int clave;
+  int posicion;
+
+}indiceArchivo;
+
 
 int crearArchivo(FILE *archivo);
+int mostrarArchivo(FILE *archivo);
 int mostrarMEnu(void);
 
 int main (){
@@ -52,6 +64,10 @@ int crearArchivo(FILE *archivo){
   int fclose (FILE *stream);
   printf("-- Archivo creado -- \n");
   return 0;
+}
+
+int mostrarArchivo(FILE *archivo){
+
 }
 
 int mostrarMEnu(void){
